@@ -38,6 +38,7 @@ const RentTable = () => {
 
   return (
     <div>
+        
       <button onClick={exportToPdf}>Export to PDF</button>
       <table {...getTableProps()} id="myTable" style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>

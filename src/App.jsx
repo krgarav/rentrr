@@ -48,7 +48,7 @@ function App() {
     <Routes>
       <Route path="/*" element={<SignIn />} />
       <Route path="/dashboard/*" element={<Dashboard />} />
-      <Route path="/dashboard/tables/renttable" element ={<RentTable/>}/>
+      {/* <Route path="/dashboard/tables/renttable" element ={<RentTable/>}/> */}
       <Route path="/auth/*" element={<Auth />} />
       <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
     </Routes>
