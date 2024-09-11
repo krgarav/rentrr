@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate, useNavigate, useLocation } from "react-router-dom";
 import { Dashboard, Auth } from "@/layouts";
 import { SignIn } from "./pages/auth";
+import RentTable from "./pages/dashboard/RentTable";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
     <Routes>
       <Route path="/*" element={<SignIn />} />
       <Route path="/dashboard/*" element={<Dashboard />} />
+      <Route path="/dashboard/tables/renttable" element ={<RentTable/>}/>
       <Route path="/auth/*" element={<Auth />} />
       <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
     </Routes>

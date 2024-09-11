@@ -11,7 +11,12 @@ import {
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { authorsTableData, projectsTableData } from "@/data";
 import tenantTableData from "@/data/tenant-table";
+import { useNavigate } from "react-router-dom";
 export function Tables() {
+  const navigate = useNavigate();
+  const rowHandler = ()=>{
+    navigate("/dashboard/tables/renttable");
+  }
   return (
     <div className="mt-12 mb-8 flex flex-col gap-12">
       <Card>
@@ -49,7 +54,7 @@ export function Tables() {
                   }`;
 
                   return (
-                    <tr className="hover:bg-gray-100 cursor-pointer" key={name}>
+                    <tr className="hover:bg-gray-100 cursor-pointer" onClick={rowHandler} key={name}>
                       <td className={className}>
                         <div className="flex items-center gap-4">
                           <Avatar src={img} alt={name} size="sm" variant="rounded" />
