@@ -87,14 +87,6 @@ export function Tables() {
                           </Tooltip>
                         ))}
                       </td>
-                      {/* <td className={className}>
-                        <Typography className="text-xs font-semibold text-blue-gray-600">
-                          {job[0]}
-                        </Typography>
-                        <Typography className="text-xs font-normal text-blue-gray-500">
-                          {job[1]}
-                        </Typography>
-                      </td> */}
                       <td className={className}>
                         <Chip
                           variant="gradient"
