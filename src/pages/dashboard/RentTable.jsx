@@ -11,6 +11,7 @@ const RentTable = () => {
       { id: 2, name: 'Bob', age: 30, city: 'San Francisco' },
       { id: 3, name: 'Charlie', age: 35, city: 'Los Angeles' },
       { id: 4, name: 'David', age: 40, city: 'Chicago' },
+      { id: 5, name: 'gaurav', age: 40, city: 'Chicago' },
     ],
     []
   );
