@@ -12,12 +12,16 @@ import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { authorsTableData, projectsTableData } from "@/data";
 import tenantTableData from "@/data/tenant-table";
 import { useNavigate } from "react-router-dom";
+import RentTable from "./RentTable";
+import { useState } from "react";
 export function Tables() {
+  const [showTable,SetShowTable] = useState(false) 
   const navigate = useNavigate();
   const rowHandler = ()=>{
     navigate("/dashboard/tables/renttable");
   }
   return (
+    
     <div className="mt-12 mb-8 flex flex-col gap-12">
       <Card>
         <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
@@ -125,6 +129,8 @@ export function Tables() {
           </table>
         </CardBody>
       </Card>
+
+
       {/* <Card>
         <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
           <Typography variant="h6" color="white">
@@ -325,7 +331,10 @@ export function Tables() {
           </table>
         </CardBody>
       </Card> */}
+    <RentTable/>
     </div>
+
+    
   );
 }
 

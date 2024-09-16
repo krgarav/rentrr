@@ -37,8 +37,8 @@ export const routes = [
         element: <Tables />,
         children: [
           {
-            path: 'renttable',
-            element: <RentTable />,
+            childPath: 'renttable',
+            childElement: <RentTable />,
           },
         ],
       },
