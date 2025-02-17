@@ -17,8 +17,8 @@ import { useState } from "react";
 export function Tables() {
   const [showTable,SetShowTable] = useState(false) 
   const navigate = useNavigate();
-  const rowHandler = ()=>{
-    navigate("/dashboard/tables/renttable");
+  const rowHandler = (name, email, job, online, date, members,budget )=>{
+    navigate("/dashboard/tables/renttable",{state:{name, email, job, online, date, members,budget }});
   }
   return (
     
@@ -58,7 +58,7 @@ export function Tables() {
                   }`;
 
                   return (
-                    <tr className="hover:bg-gray-100 cursor-pointer" onClick={rowHandler} key={name}>
+                    <tr className="hover:bg-gray-100 cursor-pointer" onClick={()=>{rowHandler(name, email, job, online, date, members,budget )}} key={name}>
                       <td className={className}>
                         <div className="flex items-center gap-4">
                           <Avatar src={img} alt={name} size="sm" variant="rounded" />
@@ -95,7 +95,7 @@ export function Tables() {
                         <Chip
                           variant="gradient"
                           color={online ? "green" : "blue-gray"}
-                          value={online ? "Paid" : "due"}
+                          value={online ? "Vacant" : "Full"}
                           className="py-0.5 px-2 text-[11px] font-medium w-fit"
                         />
                       </td>
@@ -331,7 +331,6 @@ export function Tables() {
           </table>
         </CardBody>
       </Card> */}
-    <RentTable/>
     </div>
 
     

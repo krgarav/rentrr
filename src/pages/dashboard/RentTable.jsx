@@ -2,9 +2,13 @@ import React from 'react';
 import { useTable } from 'react-table';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-
+import ChartTables from '@/widgets/ChartTables';
+import { useLocation } from 'react-router-dom';
+import { MessageCard } from '@/widgets/cards';
+import { Button } from '@material-tailwind/react';
 const RentTable = () => {
-  // Dummy data
+  const location = useLocation();
+  console.log(location.state);
   const data = React.useMemo(
     () => [
       { id: 1, name: 'Alice', age: 25, city: 'New York' },
@@ -41,7 +45,7 @@ const RentTable = () => {
     <div>
         
       <button onClick={exportToPdf}>Export to PDF</button>
-      <table {...getTableProps()} id="myTable" style={{ width: '100%', borderCollapse: 'collapse' }}>
+      {/* <table {...getTableProps()} id="myTable" style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -67,7 +71,20 @@ const RentTable = () => {
             );
           })}
         </tbody>
-      </table>
+      </table> */}
+
+       <MessageCard
+                          {...location.state}
+                          // {...props}
+                          action={
+                            <Button variant="text" size="sm">
+                              reply
+                            </Button>
+                          }
+                        />
+<ChartTables/>
+
+      
     </div>
   );
 };

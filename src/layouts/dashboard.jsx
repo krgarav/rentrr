@@ -9,6 +9,7 @@ import {
 } from "@/widgets/layout";
 import routes from "@/routes";
 import { useMaterialTailwindController, setOpenConfigurator } from "@/context";
+import RentTable from "@/pages/dashboard/RentTable";
 
 export function Dashboard() {
   const [controller, dispatch] = useMaterialTailwindController();
@@ -46,6 +47,7 @@ export function Dashboard() {
           ))
         ) : null
       )}
+       <Route path="/tables/renttable" element={<RentTable />} />
     </Routes>
         <div className="text-blue-gray-600">
           <Footer />

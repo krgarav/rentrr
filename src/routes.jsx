@@ -35,20 +35,15 @@ export const routes = [
         name: "tables",
         path: "/tables",
         element: <Tables />,
-        children: [
-          {
-            childPath: 'renttable',
-            childElement: <RentTable />,
-          },
-        ],
+        // children: [
+        //   {
+        //     childPath: '/renttable',
+        //     childElement: <RentTable />,
+        //   },
+        // ],
       },
         
-      // {
-      //   icon: <TableCellsIcon {...icon} />,
-      //   name: "tables",
-      //   path: "/renttable",
-      //   element: <RentTable />,
-      // },
+      
       {
         icon: <InformationCircleIcon {...icon} />,
         name: "notifications",
