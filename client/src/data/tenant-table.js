@@ -1,7 +1,7 @@
 const tenantTableData = [
     {
         img: "/img/team-2.jpeg",
-        name: "Flat 1",
+        name: "Flat 1 (1 BHK)",
         email: "john@creative-tim.com",
         members: [
             { img: "/img/team-2.jpeg", name: "Ryan Tompson" },
@@ -16,7 +16,7 @@ const tenantTableData = [
     },
     {
         img: "/img/team-1.jpeg",
-        name: "Flat 2",
+        name: "Flat 2 (1 BHK)",
         email: "alexa@creative-tim.com",
         members: [
             { img: "/img/team-2.jpeg", name: "Ryan Tompson" },
@@ -28,7 +28,7 @@ const tenantTableData = [
     },
     {
         img: "/img/team-4.jpeg",
-        name: "Farm House 1",
+        name: "Farm House 1 (2 RK)",
         email: "laurent@creative-tim.com",
         members: [
             { img: "/img/team-2.jpeg", name: "Ryan Tompson" },
@@ -43,14 +43,14 @@ const tenantTableData = [
     
     {
         img: "/img/team-3.jpeg",
-        name: "Farm House 2",
+        name: "Farm House 2 (1RK)",
         email: "michael@creative-tim.com",
         members: [
             { img: "/img/team-2.jpeg", name: "Ryan Tompson" },
             { img: "/img/team-4.jpeg", name: "Alexander Smith" },
         ],
         job: ["Programator", "Developer"],
-        online: true,
+        online: false,
         date: "24/12/08",
         budget: "₹2,200",
     },
